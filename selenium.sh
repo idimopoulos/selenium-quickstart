@@ -1,4 +1,5 @@
 #!/bin/bash
+DOWNLOAD_LINK="http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar"
 
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -15,7 +16,7 @@ function setup_selenium_components {
 		echo "Selenium server jar already exists. Skipping..."
 	else
 		echo "Downloading selenium-server jar file."
-		curl -Ss "https://goo.gl/hWYjHR" -o selenium-server.jar
+		curl -Ss "${DOWNLOAD_LINK}" -o selenium-server.jar
 	fi
 	if [[ -f "${DIR}/chromedriver" ]]; then
 		echo "Chromedriver already exists. Skipping..."
