@@ -15,8 +15,10 @@ cd selenium-quickstart
 chmod +x selenium.sh
 # Download the driver and the jar file.
 ./selenium.sh setup
-# Start selenium.
+# Start selenium in the background.
 ./selenium.sh start
+# Or start selenium in the foreground.
+./selenium.sh start fg
 # Stop selenium
 ./selenium.sh stop
 ```

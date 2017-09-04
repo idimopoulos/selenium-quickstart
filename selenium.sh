@@ -37,9 +37,12 @@ function setup_selenium_components {
 action="${1}"
 case "${action}" in
 	"start" )
-		# To run on the backend, switch the next to lines from and to comment.
-		# nohup /usr/bin/java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone-3.5.3.jar &;;
-		/usr/bin/java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone-3.5.3.jar;;
+		if [[ ${2} == 'fg' ]]; then
+			/usr/bin/java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server.jar
+		else
+			nohup /usr/bin/java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server.jar &
+		fi
+		;;
 	"stop" )
 		pkill -f 'selenium-server-standalone*';;
 	"setup" )
