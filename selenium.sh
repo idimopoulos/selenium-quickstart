@@ -38,9 +38,9 @@ action="${1}"
 case "${action}" in
 	"start" )
 		if [[ ${2} == 'fg' ]]; then
-			/usr/bin/java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server.jar
+			/usr/bin/java -Dwebdriver.chrome.driver=${DIR}/chromedriver -jar ${DIR}/selenium-server.jar
 		else
-			nohup /usr/bin/java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server.jar &
+			nohup /usr/bin/java -Dwebdriver.chrome.driver=${DIR}/chromedriver -jar ${DIR}/selenium-server.jar &
 		fi
 		;;
 	"stop" )
