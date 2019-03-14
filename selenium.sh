@@ -1,5 +1,5 @@
 #!/bin/bash
-DOWNLOAD_LINK="http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar"
+DOWNLOAD_LINK="http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.141.59.jar"
 
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -24,7 +24,7 @@ function setup_selenium_components {
 		echo "Changing to directory ${TMP_DIR}."
 		cd ${TMP_DIR}
 		echo "Downloading chromedriver for linux x64."
-		curl -Ss "https://chromedriver.storage.googleapis.com/2.36/chromedriver_linux64.zip" -o chromedriver.zip
+		curl -Ss "https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_mac64.zip" -o chromedriver.zip
 		echo "Unzipping content of chromedriver.zip into ${TMP_DIR}"
 		unzip -o chromedriver.zip
 		echo "Moving chromedriver into ${DIR}"
