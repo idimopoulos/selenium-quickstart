@@ -24,7 +24,7 @@ function setup_selenium_components {
 		echo "Changing to directory ${TMP_DIR}."
 		cd ${TMP_DIR}
 		echo "Downloading chromedriver."
-		curl -Ss "https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip" -o chromedriver.zip
+		curl -Ss "https://chromedriver.storage.googleapis.com/87.0.4280.88/chromedriver_linux64.zip" -o chromedriver.zip
 		echo "Unzipping content of chromedriver.zip into ${TMP_DIR}"
 		unzip -o chromedriver.zip
 		echo "Moving chromedriver into ${DIR}"
