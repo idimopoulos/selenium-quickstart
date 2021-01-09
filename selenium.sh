@@ -40,7 +40,7 @@ case "${action}" in
 		if [[ ${2} == 'fg' ]]; then
 			/usr/bin/java -Dwebdriver.chrome.driver=${DIR}/chromedriver -jar ${DIR}/selenium-server.jar
 		else
-			nohup /usr/bin/java -Dwebdriver.chrome.driver=${DIR}/chromedriver -jar ${DIR}/selenium-server.jar &
+			nohup /usr/bin/java -Dwebdriver.chrome.driver=${DIR}/chromedriver -jar ${DIR}/selenium-server.jar > /dev/null 2>&1 &
 		fi
 		;;
 	"stop" )
